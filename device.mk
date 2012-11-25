@@ -116,6 +116,14 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+PRODUCT_PACKAGES += \
+	busybox
+
+PRODUCT_PACKAGES += \
+	jctool \
+	bootsound \
+	stagefright
+
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
     NFCEE_ACCESS_PATH := device/lge/mako/nfc/nfcee_access.xml
@@ -257,3 +265,6 @@ PRODUCT_COPY_FILES += \
 	system/extras/bugmailer/send_bug:system/bin/send_bug
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
+$(call inherit-product-if-exists, jcrom/common/common.mk)
+
