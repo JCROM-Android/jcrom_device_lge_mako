@@ -39,5 +39,5 @@ PRODUCT_RESTRICT_VENDOR_FILES := true
 $(call inherit-product, device/lge/mako/device.mk)
 
 #JCROM
-$(call inherit-product-if-exists, jcrom/lge/mako/device-maguro.mk)
+$(call inherit-product-if-exists, jcrom/lge/mako/device-mako.mk)
 
