@@ -136,26 +136,6 @@ on boot
 
 # msm specific files that need to be created on /data
 on post-fs-data
-    # JCROM theme
-    mkdir /data/theme 0775 system system
-    mkdir /data/theme/bootanime 0775 system system
-    mkdir /data/theme/frame 0775 system system
-    mkdir /data/theme/launcher 0775 system system
-    mkdir /data/theme/lockscreen 0775 system system
-    mkdir /data/theme/navikey 0775 system system
-    mkdir /data/theme/notification 0775 system system
-    mkdir /data/theme/wallpaper 0775 system system
-    mkdir /data/theme/screenshot 0775 system system
-    mkdir /data/theme/statusbar 0775 system system
-    mkdir /data/theme/navibar 0775 system system
-    mkdir /data/theme/simeji 0775 system system
-    mkdir /data/theme/atok 0775 system system
-    mkdir /data/theme/sounds 0775 system system
-    mkdir /data/theme/sounds/effect 0775 system system
-    mkdir /data/theme/sounds/bootsound 0775 system system
-    mkdir /data/theme/font 0775 system system
-    mkdir /data/theme/flickwnn 0775 system system
-
     mkdir /data/media 0770 media_rw media_rw
 
     # Create the directories used by the Wireless subsystem
@@ -281,12 +261,6 @@ on charger
     write /sys/devices/system/cpu/cpu1/online 0
     write /sys/devices/system/cpu/cpu2/online 0
     write /sys/devices/system/cpu/cpu3/online 0
-
-on property:init.svc.bootanim=running
-    start bootsound
-
-on property:dev.bootcomplete=1
-    stop bootsound
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
@@ -443,17 +417,4 @@ service diag_mdlog /system/bin/logwrapper /system/bin/diag_mdlog -s 100
 
 # on property:gsm.sim.state=READY
 #    start diag_mdlog
-
-service bootsound /system/bin/bootsound
-    class main
-    user media
-    group audio
-    disabled
-    oneshot
-
-service jctool system/bin/jctool
-	class core
-	user root
-	group root
-	oneshot
 
