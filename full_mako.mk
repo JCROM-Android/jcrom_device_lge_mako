@@ -37,6 +37,7 @@ PRODUCT_RESTRICT_VENDOR_FILES := true
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/mako/device.mk)
+$(call inherit-product-if-exists, vendor/lge/mako/device-vendor.mk)
 
 #JCROM
 $(call inherit-product-if-exists, jcrom/lge/mako/device-mako.mk)
