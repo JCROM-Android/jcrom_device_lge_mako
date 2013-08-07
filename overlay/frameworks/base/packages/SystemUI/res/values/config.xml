@@ -27,8 +27,5 @@
 
     <!-- Vibration duration for MultiWaveView used in SearchPanelView -->
     <integer translatable="false" name="config_search_panel_view_vibration_duration">7</integer>
-
-    <!-- The number of columns in the QuickSettings -->
-    <integer name="quick_settings_num_columns">4</integer>
 </resources>
 
