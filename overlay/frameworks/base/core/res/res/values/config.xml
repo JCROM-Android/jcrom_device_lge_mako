@@ -264,4 +264,11 @@
 
     <!-- MMS user agent prolfile url -->
     <string name="config_mms_user_agent_profile_url" translatable="false">http://gsm.lge.com/html/gsm/20130914.xml</string>
+
+    <!-- Package name(s) containing location provider support -->
+    <string-array name="config_locationProviderPackageNames" translatable="false">
+        <item>com.android.location.fused</item>
+        <item>com.google.android.location</item>
+    </string-array>
+
 </resources>

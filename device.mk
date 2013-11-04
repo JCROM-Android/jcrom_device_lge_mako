@@ -245,6 +245,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	ro.adb.secure=1
+
 PRODUCT_PROPERTY_OVERRIDES += \
 	telephony.lteOnCdmaDevice=0
 
@@ -271,3 +274,5 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
+
+$(call inherit-product-if-exists, jcrom/common/common.mk)
