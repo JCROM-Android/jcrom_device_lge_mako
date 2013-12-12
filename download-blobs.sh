@@ -34,9 +34,9 @@ install_blobs() {
     done
 }
 
-MAGURO_BLOBS="broadcom-mako-krt16s-f54c9ff9.tgz
-              lge-mako-krt16s-23ef7d53.tgz
-              qcom-mako-krt16s-cc4bd932.tgz"
+MAGURO_BLOBS="broadcom-mako-kot49h-18b58457.tgz
+              lge-mako-kot49h-f59c98be.tgz
+              qcom-mako-kot49h-e7a74920.tgz"
 
 CSUM_LIST="$PWD/blob-shasums"
 
