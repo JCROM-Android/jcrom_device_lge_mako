@@ -1,5 +1,5 @@
 #
-# Copyright 2012 The Android Open Source Project
+# Copyright 2014 JCROM Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,7 +26,6 @@ PRODUCT_PACKAGES += \
         LiveWallpapersPicker \
         VisualizationWallpapers
 
-
 # Get the long list of APNs
 #PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 
@@ -35,7 +34,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=occam TARGET_DEVICE=mako BUILD_FINGERPRINT=google/occam/mako:4.4.4/KTU84P/1227136:user/release-keys PRIVATE_BUILD_DESC="occam-user 4.4.4 KTU84P 1227136 release-keys"
 
-PRODUCT_NAME := full_mako
+PRODUCT_NAME := jcrom_mako
 PRODUCT_DEVICE := mako
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Nexus 4
