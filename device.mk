@@ -122,6 +122,9 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras
+
 # NFC feature files + configuration
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
