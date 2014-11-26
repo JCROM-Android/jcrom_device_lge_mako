@@ -14,19 +14,6 @@
 # limitations under the License.
 #
 
-# Sample: This is where we'd set a backup provider if we had one
-# $(call inherit-product, device/sample/products/backup_overlay.mk)
-
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-        LiveWallpapers \
-        LiveWallpapersPicker \
-        VisualizationWallpapers
-
-
-# Get the long list of APNs
-PRODUCT_COPY_FILES := device/lge/mako/apns-full-conf.xml:system/etc/apns-conf.xml
-
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
@@ -43,6 +30,6 @@ PRODUCT_RESTRICT_VENDOR_FILES := true
 $(call inherit-product, device/lge/mako/device.mk)
 $(call inherit-product-if-exists, vendor/lge/mako/device-vendor.mk)
 
-#AOSP
-$(call inherit-product-if-exists, vendor/aosp/lge/mako/full.mk)
-$(call inherit-product, device/aosp/common/full.mk)
+#JCROM
+$(call inherit-product, jcrom/lge/mako/device-mako.mk)
+$(call inherit-product, jcrom/common/common.mk)
