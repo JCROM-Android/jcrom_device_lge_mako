@@ -32,7 +32,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=occam TARGET_DEVICE=mako BUILD_FINGERPRINT=google/occam/mako:5.0/LRX21T/1576899:user/release-keys PRIVATE_BUILD_DESC="occam-user 5.0 LRX21T 1576899 release-keys"
 
-PRODUCT_NAME := full_mako
+PRODUCT_NAME := jcrom_mako
 PRODUCT_DEVICE := mako
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Nexus 4

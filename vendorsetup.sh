@@ -14,7 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo aosp_mako-user
-add_lunch_combo aosp_mako-userdebug
-add_lunch_combo full_mako-user
-add_lunch_combo full_mako-userdebug
+add_lunch_combo jcrom_mako-user
+add_lunch_combo jcrom_mako-userdebug
